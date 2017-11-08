@@ -3,13 +3,12 @@ var soglass = ["б","в","г","д","ж","з","й","к","л","м","н","п","р",
 var res_glass = 0;
 var res_soglass = 0;
 
-function gls_sgls(){
-  var ask = prompt("введите фразу");
+function gls_sgls(str){
   var i = 0;
-  while (i < ask.length) {
-    if (glass.indexOf(ask[i]) != -1) {
+  while (i < str.length) {
+    if (glass.indexOf(str[i]) != -1) {
       res_glass++;
-    }else if (soglass.indexOf(ask[i]) != -1){
+    }else if (soglass.indexOf(str[i]) != -1){
       res_soglass++;
     }
     i++;
@@ -17,4 +16,4 @@ function gls_sgls(){
   alert("количество гласных " + res_glass + "\n" + "количество согласных " + res_soglass);
 }
 
-gls_sgls();
+gls_sgls("привет как дела");
